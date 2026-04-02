@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Suggest Improvement - Projekt City</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://itsmarian-static.is-a.dev/fonts/font-awesome-6.7.2/css/all.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/styles.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+	<link rel="stylesheet" href="assets/form.css">
+	<!-- i18n Configuration -->
+	<script>
+		window.i18nConfig = {
+			pageStringsPath: 'https://projektcity.com/assets/strings/forms/suggest-improvement/'
+		};
+	</script>
+	<script src="https://projektcity.com/assets/global/language.js"></script>
+	<!-- Scripts -->
+	<script src="https://projektcity.com/assets/global/cookiebanner/script.js"></script>
+	<script src="https://projektcity.com/assets/global/header.js"></script>
+	<script src="https://projektcity.com/assets/global/footer.js"></script>
+	<script src="https://projektcity.com/assets/global/script.js"></script>
+	<!-- META -->
+	<meta name="author" content="Projekt City Ltd.">
+	<meta name="description" content="Found something broken? Report a bug to the Projekt City team.">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="referrer" content="no-referrer">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="Suggest Improvement - Projekt City">
+	<meta property="og:description" content="Found something broken? Report a bug to the Projekt City team.">
+	<meta property="og:image" content="https://projektcity.com/assets/images/logos/favicon.png">
+	<meta property="og:url" content="https://forms.projekcity.com/suggest-improvement">
+	<meta property="og:type" content="website">
+</head>
+<body>
+	<header></header>
+	<main>
+        <section>
+            <div class="form-card">
+                <div class="card-header">
+                    <span class="form-icon" id="form-icon"></span>
+                    <h1 class="form-heading" id="form-heading"></h1>
+                    <p class="form-subtitle" id="form-subtitle"></p>
+                </div>
+                <form id="dynamic-form" novalidate>
+                    <div class="card-body">
+                        <div id="form-fields"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p id="form-status" class="form-status" hidden role="status" aria-live="polite"></p>
+                        <button type="submit" id="submit-btn">
+                            <span class="btn-text">Submit Report</span>
+                            <span class="btn-spinner" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+	</main>
+	<footer class="site-footer">
+		<a href="/">← All forms</a>
+	</footer>
+	<script>
+		window.formConfig = {
+			type: "suggest improvement",
+			title: "Suggest Improvement",
+			subtitle: "Found something broken or want to suggest an improvement? Let us know and we'll get on it.",
+			icon: "<i class=\"fa-solid fa-bug\"></i>",
+			successMessage: "Improvement suggested. Thanks for keeping Projekt City clean!",
+			fields: [{
+					name: "title",
+					label: "Title",
+					type: "text",
+					placeholder: "Short description of the issue",
+					required: true
+				},
+				{
+					name: "description",
+					label: "Description",
+					type: "textarea",
+					placeholder: "What happened? What did you expect to happen?",
+					rows: 5,
+					required: true
+				},
+				{
+					name: "steps",
+					label: "Steps to reproduce",
+					type: "textarea",
+					placeholder: "1. Go to...\n2. Click on...\n3. See error",
+					rows: 4
+				},
+				{
+					name: "severity",
+					label: "Severity",
+					type: "select",
+					placeholder: "How bad is it?",
+					options: [{
+							value: "low",
+							label: "Low - minor visual glitch"
+						},
+						{
+							value: "medium",
+							label: "Medium - functionality affected"
+						},
+						{
+							value: "high",
+							label: "High - major feature broken"
+						},
+						{
+							value: "critical",
+							label: "Critical - site is down"
+						}
+					]
+				},
+				{
+					name: "version",
+					label: "Version / URL",
+					type: "text",
+					placeholder: "e.g. projektcity.com/map or v2.1.0"
+				}
+			]
+		};
+	</script>
+	<script src="assets/api.js"></script>
+	<script src="assets/form.js"></script>
+</body>
+
+</html>

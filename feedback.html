@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Feedback - Projekt City</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://itsmarian-static.is-a.dev/fonts/font-awesome-6.7.2/css/all.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/styles.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+	<link rel="stylesheet" href="assets/form.css">
+	<!-- i18n Configuration -->
+	<script>
+		window.i18nConfig = {
+			pageStringsPath: 'https://projektcity.com/assets/strings/forms/feedback/'
+		};
+
+	</script>
+	<script src="https://projektcity.com/assets/global/language.js"></script>
+	<!-- Scripts -->
+	<script src="https://projektcity.com/assets/global/cookiebanner/script.js"></script>
+	<script src="https://projektcity.com/assets/global/header.js"></script>
+	<script src="https://projektcity.com/assets/global/footer.js"></script>
+	<script src="https://projektcity.com/assets/global/script.js"></script>
+	<!-- META -->
+	<meta name="author" content="Projekt City Ltd.">
+	<meta name="description" content="Share your experience or general thoughts about Projekt City.">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="referrer" content="no-referrer">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="Feedback - Projekt City">
+	<meta property="og:description" content="Share your experience or general thoughts about Projekt City.">
+	<meta property="og:image" content="https://projektcity.com/assets/images/logos/favicon.png">
+	<meta property="og:url" content="https://forms.projekcity.com/feedback">
+	<meta property="og:type" content="website">
+</head>
+
+<body>
+
+	<header></header>
+
+	<main>
+		<section>
+			<div class="form-card">
+				<div class="card-header">
+					<span class="form-icon" id="form-icon"></span>
+					<h1 class="form-heading" id="form-heading"></h1>
+					<p class="form-subtitle" id="form-subtitle"></p>
+				</div>
+				<form id="dynamic-form" novalidate>
+					<div class="card-body">
+						<div id="form-fields"></div>
+					</div>
+					<div class="card-footer">
+						<p id="form-status" class="form-status" hidden role="status" aria-live="polite"></p>
+						<button type="submit" id="submit-btn">
+							<span class="btn-text">Send Feedback</span>
+							<span class="btn-spinner" aria-hidden="true"></span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+	<script>
+		window.formConfig = {
+			type: "feedback",
+			title: "Feedback",
+			subtitle: "Good, bad, or in between - we want to hear it. Help us understand your experience and how we can improve, or just share your thoughts.",
+			icon: "<i class=\"fa-solid fa-comment\"></i>",
+			successMessage: "Feedback received. We genuinely read every submission.",
+			fields: [{
+					name: "category",
+					label: "Category",
+					type: "select",
+					placeholder: "What's this about?",
+					required: true,
+					options: [
+                        {
+							value: "general",
+							label: "General"
+						},
+						{
+							value: "website",
+							label: "Website"
+						},
+						{
+							value: "server",
+							label: "Server"
+						},
+						{
+							value: "community",
+							label: "Community"
+						},
+						{
+							value: "staff",
+							label: "Staff"
+						},
+						{
+							value: "other",
+							label: "Other"
+						}
+					]
+				},
+				{
+					name: "message",
+					label: "Your feedback",
+					type: "textarea",
+					placeholder: "Enter your feedback...",
+					rows: 6,
+					required: true
+				},
+				{
+					name: "contact",
+					label: "Contact (Discord / Email)",
+					type: "text",
+					placeholder: "If we want to follow up, how can we reach you? Optional, but helpful"
+				},
+				{
+					name: "username",
+					label: "In-game name or username",
+					type: "text",
+					placeholder: "Optional, but helpful"
+				}
+			]
+		};
+	</script>
+	<script src="assets/api.js"></script>
+	<script src="assets/form.js"></script>
+</body>
+</html>

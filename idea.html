@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Idea - Projekt City</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://itsmarian-static.is-a.dev/fonts/font-awesome-6.7.2/css/all.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/styles.css">
+	<link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+	<link rel="stylesheet" href="assets/form.css">
+	<!-- i18n Configuration -->
+	<script>
+		window.i18nConfig = {
+			pageStringsPath: 'https://projektcity.com/assets/strings/forms/idea/'
+		};
+
+	</script>
+	<script src="https://projektcity.com/assets/global/language.js"></script>
+	<!-- Scripts -->
+	<script src="https://projektcity.com/assets/global/cookiebanner/script.js"></script>
+	<script src="https://projektcity.com/assets/global/header.js"></script>
+	<script src="https://projektcity.com/assets/global/footer.js"></script>
+	<script src="https://projektcity.com/assets/global/script.js"></script>
+	<!-- META -->
+	<meta name="author" content="Projekt City Ltd.">
+	<meta name="description" content="Got a suggestion? Submit your idea to the Projekt City team.">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="referrer" content="no-referrer">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="Idea - Projekt City">
+	<meta property="og:description" content="Got a suggestion? Submit your idea to the Projekt City team.">
+	<meta property="og:image" content="https://projektcity.com/assets/images/logos/favicon.png">
+	<meta property="og:url" content="https://forms.projekcity.com/idea">
+	<meta property="og:type" content="website">
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<section>
+			<div class="form-card">
+				<div class="card-header">
+					<span class="form-icon" id="form-icon"></span>
+					<h1 class="form-heading" id="form-heading"></h1>
+					<p class="form-subtitle" id="form-subtitle"></p>
+				</div>
+				<form id="dynamic-form" novalidate>
+					<div class="card-body">
+						<div id="form-fields"></div>
+					</div>
+					<div class="card-footer">
+						<p id="form-status" class="form-status" hidden role="status" aria-live="polite"></p>
+						<button type="submit" id="submit-btn">
+							<span class="btn-text">Submit Idea</span>
+							<span class="btn-spinner" aria-hidden="true"></span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+	<script>
+		window.formConfig = {
+			type: "idea",
+			title: "Idea",
+			subtitle: "Got a suggestion? Drop it here and we'll take a look.",
+			icon: "<i class=\"fas fa-lightbulb\"></i>",
+			successMessage: "Idea submitted! Great ones make it into the roadmap.",
+			fields: [{
+					name: "title",
+					label: "Idea title",
+					type: "text",
+					placeholder: "Give it a \"one in a lifetime\" title",
+					required: true
+				},
+				{
+					name: "area",
+					label: "Area",
+					type: "select",
+					placeholder: "Which part of Projekt City?",
+					options: [{
+							value: "gameplay",
+							label: "Gameplay"
+						},
+						{
+							value: "website",
+							label: "Website"
+						},
+						{
+							value: "economy",
+							label: "Economy"
+						},
+						{
+							value: "events",
+							label: "Events"
+						},
+						{
+							value: "building",
+							label: "Building"
+						},
+						{
+							value: "community",
+							label: "Community"
+						},
+						{
+							value: "other",
+							label: "Other"
+						}
+					]
+				},
+				{
+					name: "description",
+					label: "Describe your idea",
+					type: "textarea",
+					placeholder: "What is it? How should it work? Why would players love it?",
+					rows: 6,
+					required: true
+				},
+				{
+					name: "prior_art",
+					label: "Seen it elsewhere?",
+					type: "text",
+					placeholder: "Link or name of a server / game that does this well"
+				},
+				{
+					name: "username",
+					label: "Your username",
+					type: "text",
+					placeholder: "Optional"
+				}
+			]
+		};
+	</script>
+	<script src="assets/api.js"></script>
+	<script src="assets/form.js"></script>
+</body>
+
+</html>
